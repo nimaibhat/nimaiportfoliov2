@@ -1,7 +1,7 @@
 export const GridBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-white dark:bg-[#1a1a1a]" />
+      <div className="absolute inset-0 bg-[#faf9f6] dark:bg-[#1a1a1a]" />
       {/* Light mode grid */}
       <div 
         className="absolute inset-0 dark:hidden"
