@@ -100,7 +100,7 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              A platform designed to strengthen community and reduce loneliness by connecting volunteers through meaningful engagement with the YMCA of greater cincinnati. 1st Place at Future Of Data Hackathon 2025.
+              Strengthening community and reducing loneliness with the YMCA of Greater Cincinnati. 1st Place at Future Of Data Hackathon 2025.
             </p>
           </div>
         </div>
