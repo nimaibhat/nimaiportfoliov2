@@ -6,19 +6,18 @@ export const MusicSection = () => {
 
   const formatLastUpdated = (date: Date | null): string => {
     if (!date) return "Never";
-    
-    const now = new Date();
-    const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / 60000);
-    const diffHours = Math.floor(diffMs / 3600000);
-    const diffDays = Math.floor(diffMs / 86400000);
 
-    if (diffMins < 1) return "Just now";
-    if (diffMins < 60) return `${diffMins} min${diffMins > 1 ? 's' : ''} ago`;
-    if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
-    if (diffDays < 7) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
-    
-    return date.toLocaleDateString();
+    const datePart = date.toLocaleDateString(undefined, {
+      month: "2-digit",
+      day: "2-digit",
+    });
+
+    const timePart = date.toLocaleTimeString(undefined, {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+
+    return `${datePart}, ${timePart}`;
   };
 
   return (
@@ -33,7 +32,7 @@ export const MusicSection = () => {
           </p>
         </div>
         <div className="text-zinc-400 text-sm whitespace-nowrap">
-          <span className="text-xs sm:text-sm">Last updated: {formatLastUpdated(lastUpdated)}</span>
+          <span className="text-xs sm:text-sm">Last at  {formatLastUpdated(lastUpdated)}</span>
         </div>
       </div>
       <SpotifyTracks onTracksLoaded={setLastUpdated} />
