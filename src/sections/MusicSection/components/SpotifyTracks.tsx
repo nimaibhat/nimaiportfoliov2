@@ -63,10 +63,10 @@ export const SpotifyTracks = ({ onTracksLoaded }: SpotifyTracksProps) => {
               />
             </div>
             <div className="box-border caret-transparent flex flex-col gap-y-1">
-              <div className="text-white text-sm font-medium box-border caret-transparent block leading-5 line-clamp-2">
+              <div className="text-zinc-950 dark:text-zinc-50 text-sm font-medium box-border caret-transparent block leading-5 line-clamp-2">
                 {track.name}
               </div>
-              <div className="text-zinc-400 text-sm box-border caret-transparent flow-root leading-5 text-ellipsis overflow-hidden line-clamp-1">
+              <div className="text-zinc-600 dark:text-zinc-400 text-sm box-border caret-transparent flow-root leading-5 text-ellipsis overflow-hidden line-clamp-1">
                 {track.artists.map((artist, index) => (
                   <span key={index}>
                     {index > 0 && ', '}
