@@ -33,7 +33,7 @@ export const ExperienceList = () => {
                 Vertiv
               </h3>
               <p className="text-zinc-500 dark:text-zinc-400 box-border caret-transparent text-sm">
-                engineering
+                AI Engineering Intern
               </p>
             </div>
           </div>
