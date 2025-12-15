@@ -16,7 +16,7 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              An AI intelligence layer for restaurants.
+              An AI intelligence layer for dining.
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              Revolutionize private jet technology with data.
+              Revolutionize private jet brokerage with data.
             </p>
           </div>
         </div>
