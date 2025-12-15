@@ -5,10 +5,14 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  SECRETS_SCAN_OMIT_PATHS = ".env,.env.local,.env.*.local"
 
 [[redirects]]
   from = "/api/spotify/recently-played"
   to = "/.netlify/functions/spotify-recently-played"
+  status = 200
+
+[[redirects]]
+  from = "/api/spotify/currently-playing"
+  to = "/.netlify/functions/spotify-currently-playing"
   status = 200
 

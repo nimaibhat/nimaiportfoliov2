@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { fetchRecentlyPlayedTracks, SpotifyTrack } from "@/services/spotify";
 
-export const SpotifyTracks = () => {
+interface SpotifyTracksProps {
+  onTracksLoaded?: (lastUpdated: Date | null) => void;
+}
+
+export const SpotifyTracks = ({ onTracksLoaded }: SpotifyTracksProps) => {
   const [tracks, setTracks] = useState<SpotifyTrack[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -10,10 +14,20 @@ export const SpotifyTracks = () => {
       setLoading(true);
       const data = await fetchRecentlyPlayedTracks(12);
       setTracks(data);
+      
+      // Find the most recent track's played_at timestamp
+      const lastUpdated = data.length > 0 && data[0].played_at 
+        ? new Date(data[0].played_at) 
+        : null;
+      
+      if (onTracksLoaded) {
+        onTracksLoaded(lastUpdated);
+      }
+      
       setLoading(false);
     };
     loadTracks();
-  }, []);
+  }, [onTracksLoaded]);
 
   if (loading) {
     return (

@@ -19,6 +19,11 @@ export interface SpotifyRecentlyPlayedResponse {
   }>;
 }
 
+export interface SpotifyCurrentlyPlayingResponse {
+  is_playing: boolean;
+  item: SpotifyTrack | null;
+}
+
 export const fetchRecentlyPlayedTracks = async (limit: number = 6): Promise<SpotifyTrack[]> => {
   try {
     const response = await fetch(`/api/spotify/recently-played?limit=${limit}`);
@@ -33,6 +38,20 @@ export const fetchRecentlyPlayedTracks = async (limit: number = 6): Promise<Spot
   } catch (error) {
     console.error('Error fetching Spotify tracks:', error);
     return [];
+  }
+};
+
+export const fetchCurrentlyPlaying = async (): Promise<boolean> => {
+  try {
+    const response = await fetch(`/api/spotify/currently-playing`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch currently playing status');
+    }
+    const data: SpotifyCurrentlyPlayingResponse = await response.json();
+    return data.is_playing || false;
+  } catch (error) {
+    console.error('Error fetching currently playing status:', error);
+    return false;
   }
 };
 
