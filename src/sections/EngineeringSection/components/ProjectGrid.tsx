@@ -10,7 +10,7 @@ export const ProjectGrid = () => {
             </div>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
-                ding
+                ding!
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ export const ProjectGrid = () => {
             </div>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
-                essor jet sales
+                Essor Group
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              Tying digital commitments to physical actions using real-world NFC checkpoints.
+              Tying digital commitments to physical actions using real-world NFC checkpoints. 1st Place at Lovable x BDAA Hackathon 2025.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              A clinician-friendly assistant that transforms conversations, sketches, and instructions into clear medical visuals, summaries, and multilingual voice outputs.
+              Visualizing medical concepts for those who need it. Most Technical at Hack OHI/O 2025.
             </p>
           </div>
         </div>
@@ -100,7 +100,28 @@ export const ProjectGrid = () => {
           </div>
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
-              A platform designed to strengthen community and reduce loneliness by connecting volunteers through meaningful engagement with the YMCA of greater cincinnati.
+              A platform designed to strengthen community and reduce loneliness by connecting volunteers through meaningful engagement with the YMCA of greater cincinnati. 1st Place at Future Of Data Hackathon 2025.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* buckeyering */}
+      <div className="box-border caret-transparent blur-0">
+        <div className="box-border caret-transparent flex flex-col">
+          <div className="box-border caret-transparent flex flex-col">
+            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
+              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
+            </div>
+            <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
+              <div className="relative box-border caret-transparent block">
+                buckeyering
+              </div>
+            </div>
+          </div>
+          <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
+            <p className="box-border caret-transparent">
+              A webring for Ohio State CS students. Empowering the best Big 10 student body.
             </p>
           </div>
         </div>

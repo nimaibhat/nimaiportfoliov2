@@ -7,7 +7,7 @@ export const EngineeringSection = () => {
         Engineering
       </h2>
       <p className="text-zinc-500 dark:text-zinc-400 box-border caret-transparent mb-4">
-        I build minimal, functional prototypes from 0 to 1.
+        I build prototypes from 0 to 1.
       </p>
       <ProjectGrid />
     </div>

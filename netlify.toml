@@ -11,8 +11,3 @@
   to = "/.netlify/functions/spotify-recently-played"
   status = 200
 
-[[redirects]]
-  from = "/api/spotify/currently-playing"
-  to = "/.netlify/functions/spotify-currently-playing"
-  status = 200
-
