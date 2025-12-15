@@ -1,25 +1,27 @@
 export const GridBackground = () => {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       <div className="absolute inset-0 bg-white dark:bg-[#1a1a1a]" />
+      {/* Light mode grid */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px)
+            linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px',
+          backgroundSize: '24px 24px',
         }}
       />
+      {/* Dark mode grid */}
       <div 
-        className="absolute inset-0 opacity-0 dark:opacity-100"
+        className="absolute inset-0 hidden dark:block"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+            linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px',
+          backgroundSize: '24px 24px',
         }}
       />
     </div>

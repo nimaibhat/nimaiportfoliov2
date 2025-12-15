@@ -1,0 +1,77 @@
+import express from 'express';
+import cors from 'cors';
+import fetch from 'node-fetch';
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+app.use(cors());
+app.use(express.json());
+
+// Spotify API credentials - set these in your environment variables
+const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
+const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
+
+let accessToken = null;
+let tokenExpiry = null;
+
+// Function to get Spotify access token
+async function getAccessToken() {
+  // If we have a valid token, return it
+  if (accessToken && tokenExpiry && Date.now() < tokenExpiry) {
+    return accessToken;
+  }
+
+  // Otherwise, get a new token using refresh token
+  const response = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + Buffer.from(SPOTIFY_CLIENT_ID + ':' + SPOTIFY_CLIENT_SECRET).toString('base64'),
+    },
+    body: new URLSearchParams({
+      grant_type: 'refresh_token',
+      refresh_token: SPOTIFY_REFRESH_TOKEN,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to refresh access token');
+  }
+
+  const data = await response.json();
+  accessToken = data.access_token;
+  tokenExpiry = Date.now() + (data.expires_in * 1000);
+  
+  return accessToken;
+}
+
+// API endpoint to get recently played tracks
+app.get('/api/spotify/recently-played', async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 6;
+    const token = await getAccessToken();
+
+    const response = await fetch(`https://api.spotify.com/v1/me/player/recently-played?limit=${limit}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch recently played tracks');
+    }
+
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching recently played tracks:', error);
+    res.status(500).json({ error: 'Failed to fetch recently played tracks' });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+

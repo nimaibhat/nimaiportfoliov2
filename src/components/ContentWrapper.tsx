@@ -1,7 +1,6 @@
 import { Header } from "@/sections/Header";
 import { ExperienceSection } from "@/sections/ExperienceSection";
 import { EngineeringSection } from "@/sections/EngineeringSection";
-import { PhotographySection } from "@/sections/PhotographySection";
 import { MusicSection } from "@/sections/MusicSection";
 import { ExperimentsSection } from "@/sections/ExperimentsSection";
 import { Footer } from "@/sections/Footer";
@@ -12,7 +11,6 @@ export const ContentWrapper = () => {
       <Header />
       <ExperienceSection />
       <EngineeringSection />
-      <PhotographySection />
       <MusicSection />
       <ExperimentsSection />
       <Footer />
