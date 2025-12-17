@@ -22,7 +22,7 @@ export const ProjectGrid = () => {
         </div>
       </div>
 
-      {/* essor jet sales */}
+      {/* Avera */}
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
@@ -31,7 +31,7 @@ export const ProjectGrid = () => {
             </div>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
-                Essor Group
+                Avera
               </div>
             </div>
           </div>
