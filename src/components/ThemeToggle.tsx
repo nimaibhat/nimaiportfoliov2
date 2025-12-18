@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useLoading } from '@/contexts/LoadingContext';
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const { isLoading } = useLoading();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
@@ -18,6 +20,8 @@ export const ThemeToggle = () => {
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
+
+  if (isLoading) return null;
 
   return (
     <button
