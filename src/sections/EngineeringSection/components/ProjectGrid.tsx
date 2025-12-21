@@ -66,7 +66,11 @@ export const ProjectGrid = () => {
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
             <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
+              <img
+                src="/images/projects/chkpnt.jpeg"
+                alt="chkpnt"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
@@ -116,9 +120,18 @@ export const ProjectGrid = () => {
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
-            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
-            </div>
+            <a
+              href="https://devpost.com/software/ymca-future-for-data-2025?ref_content=existing_user_added_to_software_team&ref_feature=portfolio&ref_medium=email&utm_campaign=software&utm_content=added_to_software_team&utm_medium=email&utm_source=transactional#app-team"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/belongingpassport.jpeg"
+                alt="Belonging Passport"
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
                 Belonging Passport
@@ -137,9 +150,18 @@ export const ProjectGrid = () => {
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
-            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
-            </div>
+            <a
+              href="https://cs.buckeyering.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/buckeyering.png"
+                alt="buckeyering"
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
                 buckeyering
