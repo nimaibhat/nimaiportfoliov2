@@ -5,9 +5,18 @@ export const ProjectGrid = () => {
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
-            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
-            </div>
+            <a
+              href="https://joinding.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/ding.png"
+                alt="ding!"
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
                 ding!
@@ -26,9 +35,18 @@ export const ProjectGrid = () => {
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
-            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
-            </div>
+            <a
+              href="https://flyavera.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/avera.jpeg"
+                alt="Avera"
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
                 Avera
@@ -68,9 +86,18 @@ export const ProjectGrid = () => {
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
           <div className="box-border caret-transparent flex flex-col">
-            <div className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-              <span className="text-zinc-500 dark:text-zinc-400 text-sm">Image placeholder</span>
-            </div>
+            <a
+              href="https://github.com/nimaibhat/medimoji"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/medimoji.png"
+                alt="Medimoji"
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
               <div className="relative box-border caret-transparent block">
                 Medimoji

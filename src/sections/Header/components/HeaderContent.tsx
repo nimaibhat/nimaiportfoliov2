@@ -9,7 +9,7 @@ export const HeaderContent = () => {
         </div>
         <div className="box-border caret-transparent blur-0">
           <p className="box-border caret-transparent dark:text-zinc-300">
-            Life long learner.
+            Lifelong learner.
           </p>
         </div>
         <div className="box-border caret-transparent blur-0">
