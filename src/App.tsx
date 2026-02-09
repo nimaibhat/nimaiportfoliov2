@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { GridBackground } from "@/components/GridBackground";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Footer } from "@/sections/Footer";
 
 export const App = () => {
   return (
@@ -8,6 +9,7 @@ export const App = () => {
       <GridBackground />
       <ThemeToggle />
       <Container />
+      <Footer />
       <div className="absolute box-border caret-transparent block"></div>
     </body>
   );
