@@ -1,6 +1,36 @@
 export const ProjectGrid = () => {
   return (
     <div className="box-border caret-transparent gap-x-6 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-6 md:grid-cols-[repeat(2,minmax(0px,1fr))]">
+      {/* Repurpose */}
+      <div className="box-border caret-transparent blur-0">
+        <div className="box-border caret-transparent flex flex-col">
+          <div className="box-border caret-transparent flex flex-col">
+            <a
+              href="https://github.com/nimaibhat/repurpose"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/images/projects/repurpose.png"
+                alt="Repurpose"
+                className="w-full h-full object-cover"
+              />
+            </a>
+            <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
+              <div className="relative box-border caret-transparent block">
+                Repurpose
+              </div>
+            </div>
+          </div>
+          <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
+            <p className="box-border caret-transparent">
+              Finding which FDA drugs can be repurposed for cancer with AI. 1st Place at Hack/AI 2026.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* void */}
       <div className="box-border caret-transparent blur-0">
         <div className="box-border caret-transparent flex flex-col">
@@ -56,36 +86,6 @@ export const ProjectGrid = () => {
           <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
             <p className="box-border caret-transparent">
               An AI intelligence layer for dining.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Avera */}
-      <div className="box-border caret-transparent blur-0">
-        <div className="box-border caret-transparent flex flex-col">
-          <div className="box-border caret-transparent flex flex-col">
-            <a
-              href="https://flyavera.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="aspect-[1.85_/_1] box-border caret-transparent block overflow-hidden mb-3 rounded-lg bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src="/images/projects/avera.jpeg"
-                alt="Avera"
-                className="w-full h-full object-cover"
-              />
-            </a>
-            <div className="relative font-medium items-baseline box-border caret-transparent flex justify-between mb-1">
-              <div className="relative box-border caret-transparent block">
-                Avera
-              </div>
-            </div>
-          </div>
-          <div className="text-zinc-500 box-border caret-transparent leading-[19.2px] max-w-[687.441px]">
-            <p className="box-border caret-transparent">
-              Revolutionize private jet brokerage with data.
             </p>
           </div>
         </div>
