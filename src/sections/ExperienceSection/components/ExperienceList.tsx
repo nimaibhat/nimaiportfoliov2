@@ -17,7 +17,7 @@ export const ExperienceList = () => {
             </div>
           </div>
           <div className="text-zinc-500 dark:text-zinc-400 text-sm box-border caret-transparent text-right shrink-0">
-            Incoming June 2026
+            Jun 2026 - Present
           </div>
         </div>
       </div>
