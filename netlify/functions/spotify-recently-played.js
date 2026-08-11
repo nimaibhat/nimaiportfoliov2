@@ -41,7 +41,11 @@ export const handler = async (event, context) => {
       console.error('Failed to refresh access token:', error);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to refresh access token' }),
+        body: JSON.stringify({
+          error: 'Failed to refresh access token',
+          spotifyStatus: tokenResponse.status,
+          spotifyError: error,
+        }),
       };
     }
 
@@ -60,7 +64,11 @@ export const handler = async (event, context) => {
       console.error('Failed to fetch recently played tracks:', error);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to fetch recently played tracks' }),
+        body: JSON.stringify({
+          error: 'Failed to fetch recently played tracks',
+          spotifyStatus: tracksResponse.status,
+          spotifyError: error,
+        }),
       };
     }
 
