@@ -1,209 +1,133 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
-  font-family: 'suisseIntl';
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('https://www.freemanjiang.com/_next/static/media/4cf2300e9c8272f7-s.p.woff2') format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('https://www.freemanjiang.com/_next/static/media/93f479601ee12b01-s.p.woff2') format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@tailwind base;
-
-@layer base {
-  :root {
-    --background: 45 30% 98%;
-    --foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --popover: 45 30% 98%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
-    --card: transparent;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: transparent;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
-  }
+/* Colors and type mirror paco.me */
+:root {
+  color-scheme: dark;
+  --bg: #1a1a1a;
+  --fg: #f2f2f2;
+  --text: #e5e5e5;
+  --dim: #a0a0a0;
+  --line: #505050;
+  --selection: #ffffff14;
+  --font-sans: "Sohne", "Inter", system-ui, sans-serif;
+  --font-serif: "Newsreader", "Times", serif;
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/28px var(--font-sans);
+    font-feature-settings: "kern", "calt";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
-    @apply text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+  h1,
+  h2 {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  em {
+    font: italic 400 calc(1em + 1px) / normal var(--font-serif);
+    color: var(--fg);
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+}
+
+/* Entrance animation, same timing as paco.me: each top-level block rises 10px and fades in, 0.12s apart */
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+[data-enter] > * {
+  animation: enter 0.6s both;
+  animation-delay: calc(var(--stagger, 0) * 0.12s);
+}
+
+[data-enter] > :nth-child(2) { --stagger: 1; }
+[data-enter] > :nth-child(3) { --stagger: 2; }
+[data-enter] > :nth-child(4) { --stagger: 3; }
+[data-enter] > :nth-child(5) { --stagger: 4; }
+[data-enter] > :nth-child(6) { --stagger: 5; }
+[data-enter] > :nth-child(n + 7) { --stagger: 6; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-enter] > * {
+    animation: none;
+  }
+}
+
+@layer components {
+  .link {
+    text-decoration-line: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 150ms;
+  }
+
+  .link:hover {
+    text-decoration-color: var(--fg);
+  }
+
+  .muted {
+    color: var(--dim);
+  }
+
+  .body-text {
+    color: var(--text);
+  }
+
+  /* Rendered markdown pages (content/*.md) */
+  .md h2 {
+    @apply mt-10 font-medium first:mt-0;
+  }
+
+  .md p {
+    @apply body-text mt-3;
+  }
+
+  .md a {
+    @apply link;
+  }
+
+  .md img {
+    @apply mt-10 w-full rounded-lg;
+  }
+
+  .md p:has(> img) + p:not(:has(> em:only-child)) {
+    @apply mt-6;
+  }
+
+  /* An italic line on its own is an image caption */
+  .md p:has(> em:only-child) {
+    @apply muted mt-3 text-sm;
+  }
+
+  .md p.note {
+    @apply mt-10 text-[#707070];
+  }
+
+  .md ul {
+    @apply body-text mt-3 list-disc space-y-1 pl-5;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -1,16 +1,23 @@
-import { Container } from "@/components/Container";
-import { GridBackground } from "@/components/GridBackground";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Footer } from "@/sections/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "@/components/Layout";
+import { Home } from "@/pages/Home";
+import { Questions } from "@/pages/Questions";
+import { Music } from "@/pages/Music";
+import { Project } from "@/pages/Project";
+import { NotFound } from "@/pages/NotFound";
 
 export const App = () => {
   return (
-    <body className="text-zinc-950 dark:text-zinc-50 text-base not-italic normal-nums font-normal accent-auto box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-suisseintl transition-colors">
-      <GridBackground />
-      <ThemeToggle />
-      <Container />
-      <Footer />
-      <div className="absolute box-border caret-transparent block"></div>
-    </body>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/p/:id" element={<Project />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
