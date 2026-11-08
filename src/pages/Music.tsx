@@ -20,7 +20,8 @@ export const Music = () => {
     <>
       <h1 className="font-medium">Music</h1>
       <p className="muted mb-12">
-        I enjoy R&amp;B the most, as well as Hip Hop and Jazz. These are my recents.
+        I enjoy R&amp;B the most, as well as Hip Hop and Jazz. Sometimes I get
+        really hooked on a song and only play that for a week. These are my recents.
       </p>
 
       {tracks === null ? (

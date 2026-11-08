@@ -87,6 +87,25 @@
     color: var(--text);
   }
 
+  /* A list where hovering one item keeps it white and dims the others */
+  .hover-item,
+  .hover-item .muted {
+    transition: color 150ms;
+  }
+
+  .hover-list:has(.hover-item:hover) .hover-item,
+  .hover-list:has(.hover-item:hover) .hover-item .muted {
+    color: #505050;
+  }
+
+  .hover-list .hover-item:hover {
+    color: #ffffff;
+  }
+
+  .hover-list .hover-item:hover .muted {
+    color: var(--dim);
+  }
+
   /* Rendered markdown pages (content/*.md) */
   .md h2 {
     @apply mt-10 font-medium first:mt-0;
@@ -111,6 +130,10 @@
   /* An italic line on its own is an image caption */
   .md p:has(> em:only-child) {
     @apply muted mt-3 text-sm;
+  }
+
+  .md p:has(> em:only-child) em {
+    color: inherit;
   }
 
   .md p.note {
