@@ -22,15 +22,18 @@ export const Footer = () => {
   });
 
   return (
-    <footer className="mt-24 h-12 border-t border-[#2e2e2e] px-6">
-      <div className="mx-auto flex h-full max-w-[640px] items-center whitespace-nowrap text-sm leading-5 text-[#707070]">
-        <span className="mr-auto">Everything around me is someone's life work.</span>
-        <span className="tabular-nums">{time.getFullYear()}</span>
-        {/* Rotated 180° so hands hang from the top edge of their box toward 12 o'clock */}
-        <div className="relative ml-4 h-5 w-5 rotate-180 rounded-full border border-[#505050]">
-          {[hand((h / 12) * 360, 5), hand((m / 60) * 360, 7), hand((s / 60) * 360, 8, 0.5)].map((style, i) => (
-            <div key={i} className="absolute top-1/2 origin-top rounded-full bg-[#707070]" style={style} />
-          ))}
+    <footer className="mt-24 border-t border-[#2e2e2e] px-6">
+      {/* Stacks on phones so the quote isn't squeezed against the year and clock; one row from 640px up */}
+      <div className="mx-auto flex max-w-[640px] flex-col gap-2 py-5 text-sm leading-5 text-[#707070] sm:h-12 sm:flex-row sm:items-center sm:gap-0 sm:py-0">
+        <span className="sm:mr-auto">Everything around me is someone's life work.</span>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <span className="tabular-nums">{time.getFullYear()}</span>
+          {/* Rotated 180° so hands hang from the top edge of their box toward 12 o'clock */}
+          <div className="relative h-5 w-5 rotate-180 rounded-full border border-[#505050]">
+            {[hand((h / 12) * 360, 5), hand((m / 60) * 360, 7), hand((s / 60) * 360, 8, 0.5)].map((style, i) => (
+              <div key={i} className="absolute top-1/2 origin-top rounded-full bg-[#707070]" style={style} />
+            ))}
+          </div>
         </div>
       </div>
     </footer>
